@@ -2,18 +2,55 @@ body,
 html {
     margin: 0;
     padding: 0;
-    background-color: #ffe6d1;
+    background-color: var(--secondcolor);
 }
 
 a{
   text-decoration: none;
 }
+:root{
+	--maincolor: #252525;
+    --secondcolor: #ffcf40;
+    /* #  FFD195*/
+
+}
+
+
+@font-face {
+    font-family: 'hot_resturant';
+    src: local('hot_resturant'),
+         /* url('fonts/Hot Restaurant.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Hot Restaurant.woff') format('woff'), */
+         url('fonts/Hot Restaurant.ttf') format('truetype'),
+         url('fonts/Hot Restaurant.svg#hot_resturant') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-strecht: condensed;
+    unicode-range: "U+0-10FFFF";
+}
+
+
+@font-face {
+    font-family: 'Satisfy';
+    src: local('Satisfy'),
+         /* url('fonts/Satisfy-Regular.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Satisfy-Regular.woff') format('woff'), */
+         url('fonts/Satisfy-Regular.ttf') format('truetype'),
+         url('fonts/Satisfy-Regular.svg#Satisfy') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-strecht: condensed;
+    unicode-range: "U+0-10FFFF";
+}
+
 
 .editlink {
-    background-color: cyan;
+    background-color: #25221e;
     border-radius: 50%;
-    height: 100px;
-    width: 100px;
+    color: var(--secondcolor);
+    border-radius: 50%;
+    height: 90px;
+    width: 90px;
     position: fixed;
     right: 20px;
     top: 15px;
@@ -22,7 +59,7 @@ a{
     align-items: center;
     justify-content: center;
     font-size: 13px;
-    font-family: Quicksand,
+    font-family: Hot H,Quicksand,
         sans-serif;
     font-weight: 600;
     transform: rotate(12deg);
@@ -36,7 +73,7 @@ a{
     align-items: center;
     text-align: center;
     font-family: Quicksand, sans-serif;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 600;
 }
 
@@ -47,22 +84,31 @@ a{
     border-collapse: collapse;
 }
 
-#special_component {
+#special_component{
     width: 100%;
-    background-color: #fff;
+    background-color: var(--secondcolor);
     margin: 0 auto;
 }
+
+
 
 .specials-table-container {
     max-width: 1500px;
     margin: 40px auto;
 }
 
+
+.menuStyle {
+    background-color: #ffe6d1;
+    color: #000;
+}
+
 h1 {
-    font-family: "Damion", cursive;
+    font-family: "hot_resturant", cursive;
     font-size: 50px;
     font-weight: 100;
-    line-height: 25px;
+    
+    /* line-height: 25px; */
 }
 
 .nameandprice td {
@@ -74,8 +120,20 @@ h1 {
     background-position: left bottom;
 }
 
+.nameandprice th {
+    padding: 1em 0 0 0;
+    vertical-align: bottom;
+    
+}
+
 .nameandprice span {
-    background-color: #fff;
+    /* background-color: #fff; */
+    background-color: var(--secondcolor);
+}
+.nameandprice th:first-child {
+    text-align: left;
+    font-weight: 700;
+    font-size: 20px;
 }
 
 .nameandprice td:first-child {
@@ -121,3 +179,5 @@ td:last-child span {
         top: -15px;
     }
 }
+
+
