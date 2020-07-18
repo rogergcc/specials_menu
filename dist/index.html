@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CodePen - Sheets API Specials Menu</title>
+  <link href="https://fonts.googleapis.com/css?family=Damion|Quicksand" rel="stylesheet"><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!-- <a href="https://docs.google.com/spreadsheets/d/1zIVCVA0Tk5CvAiTyeAdDBPygT3aKDiSeM2FbPU0JO2c/edit?usp=sharing" target="_blank" rel="noopener noreferrer">
+    <div class="editlink">INSPECT<br />SHEET</div>
+</a> -->
+
+<div id="app">
+        <section id="specialssection" class="specials-container" v-if="menuItems_L" :style="">
+            <div id="special_component" :style="">
+                <h1>Daily Specials</h1>
+                <div class="specials-table-container">
+                    <table>
+                        <tbody v-for="item in menuItems_L" :key="`specialmenu-${item.name}`">
+                            <tr class="nameandprice">
+                                <td :style="">
+                                    <span :style="">{{item.name}}</span>
+                                </td>
+                                <td :style="">
+                                    <span :style="">${{item.price}}</span>
+                                </td>
+                            </tr>
+                            <tr class="description">
+                                <td colspan="2">{{item.description}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table>
+                        <tbody v-for="item in menuItems_R" :key="`specialmenu-${item.name}`">
+                            <tr class="nameandprice">
+                                <td :style="">
+                                    <span :style="">{{item.name}}</span>
+                                </td>
+                                <td :style="">
+                                    <span :style="">${{item.price}}</span>
+                                </td>
+                            </tr>
+                            <tr class="description">
+                                <td colspan="2">{{item.description}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

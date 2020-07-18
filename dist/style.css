@@ -1,0 +1,216 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    background-color: var(--secondcolor);
+}
+
+a{
+  text-decoration: none;
+}
+:root{
+	--maincolor: #252525;
+    --secondcolor: #FFBD42;
+    /* #  FFD195*/
+
+}
+
+/* var(--secondcolor); */
+
+@font-face {
+    font-family: 'LaBelleAurore';
+    src: local('LaBelleAurore'),
+         /* url('LaBelleAurore-Regular.eot?#iefix') format('embedded-opentype'),
+         url('LaBelleAurore-Regular.woff') format('woff'), */
+         url('LaBelleAurore-Regular.ttf') format('truetype'),
+         url('LaBelleAurore-Regular.svg#LaBelleAurore') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-strecht: condensed;
+    unicode-range: "U+0-10FFFF";
+}
+
+
+@font-face {
+    font-family: 'hot_resturant';
+    src: local('hot_resturant'),
+         /* url('Hot Restaurant.eot?#iefix') format('embedded-opentype'),
+         url('Hot Restaurant.woff') format('woff'), */
+         url('Hot Restaurant.ttf') format('truetype'),
+         url('Hot Restaurant.svg#hot_resturant') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-strecht: condensed;
+    unicode-range: "U+0-10FFFF";
+}
+
+
+@font-face {
+    font-family: 'Satisfy';
+    src: local('Satisfy'),
+         /* url('Satisfy-Regular.eot?#iefix') format('embedded-opentype'),
+         url('Satisfy-Regular.woff') format('woff'), */
+         url('Satisfy-Regular.ttf') format('truetype'),
+         url('Satisfy-Regular.svg#Satisfy') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-strecht: condensed;
+    unicode-range: "U+0-10FFFF";
+}
+
+
+.editlink {
+    background-color: cyan;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    position: fixed;
+    right: 20px;
+    top: 15px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-family: Hot H,Quicksand,
+        sans-serif;
+    font-weight: 600;
+    transform: rotate(12deg);
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+}
+
+.specials-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: Quicksand, sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.specials-container table {
+    width: 90%;
+    margin: 0px auto;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+
+#special_component{
+    width: 100%;
+    background-color: var(--secondcolor);
+    margin: 0 auto;
+}
+
+
+
+.specials-table-container {
+    max-width: 1500px;
+    margin: 40px auto;
+}
+
+
+.menuStyle {
+    background-color: #ffe6d1;
+    color: #000;
+}
+
+h1 {
+    font-family: "Satisfy", cursive;
+    font-size: 50px;
+    font-weight: 100;
+    /* line-height: 25px; */
+}
+
+.nameandprice td {
+    padding: 1em 0 0 0;
+    vertical-align: bottom;
+    background-image: radial-gradient(black 1px, transparent 0px);
+    background-size: 8px 8px;
+    background-repeat: repeat-x;
+    background-position: left bottom;
+}
+
+.nameandprice th {
+    padding: 1em 0 0 0;
+    vertical-align: bottom;
+    
+}
+
+.nameandprice span {
+    /* background-color: #fff; */
+    background-color: var(--secondcolor);
+}
+.nameandprice th:first-child {
+    text-align: left;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.nameandprice td:first-child {
+    text-align: left;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.nameandprice td:first-child span {
+    padding-right: 0.25em;
+}
+
+.nameandprice td:last-child {
+    text-align: right;
+    width: 3em;
+    font-size: 20px;
+}
+
+.description td {
+    text-align: left;
+    padding: 8px 0px 15px 15px;
+}
+
+td:last-child span {
+    padding-left: 0.25em;
+}
+
+@media (min-width: 992px) {
+    .specials-container table {
+        margin: 40px;
+      width: 45%;
+    }
+
+    .specials-table-container {
+        display: flex;
+        margin: 0px auto;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .editlink {
+        right: -20px;
+        top: -15px;
+    }
+}
+
+
+
+/* 
+@media (min-width: 576px) {
+	html {
+		font-size: 14px;
+	}
+}
+
+@media (min-width: 768px) {
+	html {
+		font-size: 16px;
+	}
+}
+
+@media (min-width: 992px) {
+	html {
+		font-size: 18px;
+	}
+} */
+
+
