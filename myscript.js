@@ -52,6 +52,8 @@ async function SetData(){
 }
 
 
-SetData();
 
-
+document.addEventListener("DOMContentLoaded", function(event) { 
+  //do work
+  SetData();
+});
