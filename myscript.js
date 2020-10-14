@@ -17,7 +17,7 @@ async function fetchDataAxios() {
 async function SetData(){
   try {
     let result = await fetchDataAxios();
-    console.table(result);
+    
     const tbody1 = document.getElementById('tbody_1');
     const tbody2 = document.getElementById('tbody_2');
     let htmlelement="";
