@@ -1,4 +1,9 @@
 
+
+const spinner = document.getElementById("spinner");
+const tbody1 = document.getElementById('tbody_1');
+const tbody2 = document.getElementById('tbody_2');
+
 async function fetchData() {
     // let specials = response.data.items
     
@@ -17,9 +22,8 @@ async function fetchDataAxios() {
 async function SetData(){
   try {
     let result = await fetchDataAxios();
-    
-    const tbody1 = document.getElementById('tbody_1');
-    const tbody2 = document.getElementById('tbody_2');
+    spinner.setAttribute("hidden", "");
+
     let htmlelement="";
 
     tbody1.innerHTML="";
@@ -32,11 +36,11 @@ async function SetData(){
                 <span >${element.Title}</span>
             </td>
             <td >
-                <span >${element.Price}</span>
+                <span >${element.Price? element.Price: 'S./0'}</span>
             </td>
         </tr>
         <tr class="description">
-            <td colspan="1">${element.Description}</td>
+            <td colspan="1">${element.Description?element.Description:'-'}</td>
         </tr>`;
 
         if (i%2==0) {
@@ -55,5 +59,8 @@ async function SetData(){
 
 document.addEventListener("DOMContentLoaded", function(event) { 
   //do work
+  // spinner.classList.add('show');
+  // spinner.removeAttribute("hidden");
+
   SetData();
 });
