@@ -18,7 +18,6 @@ async function fetchDataAxios() {
   return rsp.data.items;
 }
 
-
 async function SetData(){
   try {
     let result = await fetchDataAxios();
