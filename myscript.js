@@ -3,6 +3,7 @@
 const spinner = document.getElementById("spinner");
 const tbody1 = document.getElementById('tbody_1');
 const tbody2 = document.getElementById('tbody_2');
+const titleh1 = document.getElementById('titleh1');
 
 async function fetchData() {
     // let specials = response.data.items
@@ -13,8 +14,9 @@ async function fetchData() {
 }
 
 async function fetchDataAxios() {
-  const rsp = await axios( "https://script.google.com/macros/s/AKfycby01lKNm94FHYORH3_c-lHK35r4zOoZiF8_tOD-QhfujBglDiE/exec?action=getItems" );
+  const rsp = await axios( "https://script.google.com/macros/s/AKfycbz_iKX_JXqh2xQnpJ6lmd2Omq5VzJdPLu7c-kAwypPCMhH2s8IyM6Pn7pKajWKt3hmG/exec?action=getItems" );
 
+  titleh1.innerHTML= `Especiales del día ${rsp.data.diaDeHoy}`
   return rsp.data.items;
 }
 
