@@ -1,0 +1,24 @@
+.giti# Extensiones de editores de código
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+
+# Archivos temporales del sistema
+.DS_Store
+Thumbs.db
+
+# Logs de errores
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# En caso de que uses Node.js en el futuro
+node_modules/
+dist/
+
+# Archivos de configuración local que podrían tener datos sensibles
+.env
