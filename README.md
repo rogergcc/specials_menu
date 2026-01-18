@@ -6,7 +6,6 @@ Data Architecture: Leverages Google Sheets as a NoSQL database, allowing restaur
 
 Backend (Serverless): Built with Google Apps Script, the engine processes real-time requests, detects the current day of the week, and automatically filters the relevant dishes.
 
-Advanced Business Logic: I implemented a priority system that detects holidays and special dates, automatically overriding the regular menu with a pre-configured "Premium" version.
 
 Frontend & UX: Developed with Vanilla JavaScript, featuring Skeleton Screens for a seamless loading experience and CSS Grid for a responsive design that fits any device.
 
